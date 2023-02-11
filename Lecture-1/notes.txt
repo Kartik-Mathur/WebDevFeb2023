@@ -1,0 +1,13 @@
+Semantic Code: To tell whatever we are writing on our webpage
+what exactly it is.
+
+headings: h1,h2,h3,h4,h5,h6
+
+Block Elements v/s Inline Elements
+Blocks: takes the entire view port width(p, div)
+Inline: Only takes the space that is required (span)
+
+
+List: 
+    - unordered List (ul)
+    - ordered List (ol)
