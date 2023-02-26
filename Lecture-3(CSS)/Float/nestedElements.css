@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent{
+    width: 800px;
+    border: 1px solid black;
+    margin: 10px auto;
+}
+
+.div{
+    width: 700px;
+    border: 1px solid black;
+    margin: 10px auto;
+    padding: 5px;
+    /* text-align: center; */
+}
+
+.div1{
+    background-color: orange;
+}
+
+.img{
+    width: 15%;
+    border-radius: 50%;
+    float: left;
+}
+
+.about-salman{
+    width: 80%;
+    float: right;
+    margin-left: 10px;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.randomDiv{
+    border: 2px solid black
+}
+
+.div1::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.phone::before{
+    content: "\1F4DE";
+}

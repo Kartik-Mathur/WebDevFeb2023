@@ -1,0 +1,39 @@
+h1,
+div{
+    font-family: sans-serif;
+    font-size: 30px;
+    color: burlywood;
+}
+
+.animals{
+    color: blue;
+}
+
+.animals{
+    color: brown;
+    /* margin-top: 10px;
+    margin-left: 40px;
+    margin-bottom: 20px; */
+    /* margin: 10px 0 20px 40px; */
+    margin: 10px 40px;
+}
+
+.caretaker{
+    color: darkblue;
+}
+
+#lion{
+    color: darkorchid;
+}
+
+div{
+    color: cadetblue !important;
+}
+
+
+/* UNIVERSAL SELECTOR */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}

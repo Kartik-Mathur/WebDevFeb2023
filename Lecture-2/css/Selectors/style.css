@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    line-height: 1.5;
+}
+
+/* DESCENDANT SELECTOR */
+/* Grandfather --> Father --> Child */
+span{
+    color: orange;
+}
+
+div div{
+    color: red;
+}
+
+div div span{
+    color: rgb(226, 19, 191);
+}
+
+/* Combinators */
+/* 1. > Direct Child */
+/* 2. + Immediate Sibling */
+/* 3. ~ General Sibling */
+
+ul{
+    margin: 12px;
+}
+
+/* ul>li{
+    color: rgb(77, 174, 253);
+} */
+
+/* li+li{
+    color: teal;
+} */
+
+/* li~li{
+    color: orangered;
+} */
+
+/* PSUEDOCLASS */
+.navbar{
+    border: 1px solid black;
+    background-color: black;
+    padding: 10px;
+}
+
+/*  PSUEDOCLASS: lvha(link, visited, hover, active) */
+.nav-item{
+    margin: 0px 8px;
+}
+.nav-item:link{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item:visited{
+    color: white;
+}
+
+.nav-item:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.nav-item:active{
+    color: black;
+    background-color: yellow;
+    text-decoration: none;
+}
+
+/* PSEUDOCLASS */
+li:nth-child(-3n+8){
+    color: purple;
+    text-decoration: underline;
+}
+
+
+/* STRUCUTRAL PSUEDOCLASS */
+/* li:first-child{
+    color: cornflowerblue;
+} */
+/* 
+li:last-child{
+    color: cornflowerblue;
+} */
+
+/* :only-child{
+    background-color: black;
+} */
