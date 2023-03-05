@@ -1,0 +1,41 @@
+body{
+    perspective: 800px;
+}
+
+.container{
+    height: 250px;
+    width: 200px;
+    background-color: cornflowerblue;
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition-duration: 1s;
+}
+
+.side-a,
+.side-b{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.side-a{
+    background-color: orange;
+    position: absolute;
+    background: url("https://www.pinkvilla.com/imageresize/akshay_kumar_in_talks_with_producer_dinesh_vijan_for_their_next.jpg?width=752&t=pvorg");
+    background-size: cover;
+}
+
+.side-b{
+    background-color: orchid;
+    position: absolute;
+    transform: rotateY(180deg);
+}
+
+.container:hover{
+    transform: rotateY(180deg);
+}
+
+.image-card{
+    height: 100%;
+}
