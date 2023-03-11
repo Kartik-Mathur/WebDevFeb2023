@@ -1,0 +1,10 @@
+.mainContainer{
+    height: 600px;
+    background-color: orange;
+}
+
+.myCol{
+    background-color: rgb(229, 255, 0);
+    font-size: 35px;
+    border: 1px solid black;
+}
