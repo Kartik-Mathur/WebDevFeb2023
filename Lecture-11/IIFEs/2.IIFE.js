@@ -1,6 +1,6 @@
 // () 
 // (()=>{}), (function(){})
-// (()=>{})()
+// (()=>{})() // Call kar diya
 
 let details = (()=>{
     let person = {
