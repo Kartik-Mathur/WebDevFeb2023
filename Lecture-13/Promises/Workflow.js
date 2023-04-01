@@ -35,8 +35,8 @@ function upload(file) {
 download('http://movies.com/singham.mp4')
     .then(compress)
     .then(upload)
-    .then(()=>{
-        console.log("All done");
+    .then((newUrl)=>{
+        console.log("All done",newUrl);
     })
     .catch(err => console.log(err));
 
