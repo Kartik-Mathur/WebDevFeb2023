@@ -1,0 +1,17 @@
+.container{
+    border: 1px solid black;
+    background-color: coral;
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item{
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
+    border: 1px solid black;
+    text-align: center;
+    background-color: yellow;
+}
