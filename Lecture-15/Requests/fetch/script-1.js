@@ -23,7 +23,6 @@ function addDataToList(data) {
     })
 }
 
-
 function solve() {
     getData(URL)
         .then((data) => {
