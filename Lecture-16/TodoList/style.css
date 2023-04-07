@@ -1,0 +1,152 @@
+.item{
+    /* text-decoration: none; */
+    list-style: none;
+    margin: 20px 0;
+}
+
+.upArrow,
+.downArrow,
+.deleteTask{
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.item:first-child .buttons .upArrow{
+    visibility: hidden;
+}
+
+.item:last-child .buttons .downArrow{
+    visibility: hidden;
+}
+
+.taskList{
+    margin-top: 20px;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 500px;
+    margin: 30px auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.inp{
+    width: 80%;
+}
+
+.btn{
+    width: 15%;
+}
+
+.btn,
+.inp{
+    padding: 5px;
+}
+
+.lineCut{
+    text-decoration: line-through;
+}
+
+/* .taskList{
+    border: 1px solid black;
+    width: 90%;
+    margin: auto
+} */
+
+.taskInput{
+    float: left;
+    font-size: 18px;
+}
+
+.buttons{
+    float: right;
+    margin-right: 18%;
+}
+
+.item::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 
+#tasklist{
+    margin: 20px auto;
+}
+
+.heading{
+    text-align: center;
+    font-size: 40px;
+}
+
+.inputTask{
+    text-align: center;
+}
+
+.header{
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    box-shadow: 10px 10px 8px #ccc;
+}
+
+.inputTask input{
+    padding: 5px;
+    font-size: 15px;
+    width: 70%;
+}
+
+.inputTask button{
+    padding: 5px;
+    font-size: 15px;
+}
+
+.task{
+    list-style: none;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px auto;
+    background-color: rgb(59, 115, 218);
+    box-shadow: 5px 5px 5px #ccc;
+    
+}
+
+.btnGrp{
+    float:right;
+    mix-blend-mode: color-burn;
+}
+
+.btnGrp button{
+    border: 0px;
+    background-color: white;
+    margin: 3px;
+}
+
+ul{
+    color: white;
+    font-family: sans-serif;
+
+}
+
+.lineCut{
+    text-decoration: line-through;
+}
+
+li:first-child .btnGrp .up{
+    visibility: hidden;
+}
+
+li:last-child .btnGrp .down{
+    visibility: hidden;
+} */
