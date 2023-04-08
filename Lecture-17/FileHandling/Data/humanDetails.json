@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Vaibhav",
+        "age": 23,
+        "hobby": "Singing"
+    },
+    {
+        "name": "Kartikey",
+        "age": 27,
+        "hobby": "Dancing"
+    },
+    {
+        "name": "Nitish",
+        "age": 25,
+        "hobby": "Smuggling"
+    },
+    {
+        "name": "Farhan Akhtar",
+        "age": 33,
+        "hobby": "Acting"
+    }
+]
