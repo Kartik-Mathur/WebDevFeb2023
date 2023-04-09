@@ -15,5 +15,5 @@ fs.readFile(
         if(err) throw new Error("Nahi likh paaye")
         // console.log(data.toString())
         console.log(data);
-    }``
+    }
 );
