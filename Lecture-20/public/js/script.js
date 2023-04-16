@@ -23,7 +23,7 @@ function addToTaskList(todos){
     taskList.innerText = '';
     todos.forEach((t)=>{
         let li = document.createElement('li');
-        li.innerText = t;
+        li.innerText = t.name;
         taskList.appendChild(li);
     })
 }
@@ -37,7 +37,7 @@ form.addEventListener('submit',async (ev)=>{
             newtask: taskName
         });
         let todos = data.data;
-        // console.log(todos);
+        console.log(todos);
         addToTaskList(todos);
     }catch(err){
         console.log(err);
