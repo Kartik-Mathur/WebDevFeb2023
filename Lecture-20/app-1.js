@@ -5,7 +5,6 @@ const PORT = 4444;
 const bodyParser = require('body-parser');
 const { v4: uuidv4 } = require('uuid');
 const TodosDB = require('./database/scripts/todos');
-const { copyFileSync } = require('fs');
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
