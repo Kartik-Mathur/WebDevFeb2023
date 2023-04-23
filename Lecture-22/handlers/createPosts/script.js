@@ -37,3 +37,31 @@ module.exports.getDeleteItem = async (req,res)=>{
         next();
     }
 };
+
+module.exports.getUpdatePost = async (req,res,next)=>{
+    const {id} = req.query;
+    try{
+        let item = await Posts.getOnePost(id);
+        res.render('updatepost',{
+            item
+        });
+    }catch(err){
+        next();
+    }
+}
+
+module.exports.postUpdatePost = async (req,res,next)=>{
+    const {id,title,imageUrl,caption} = req.body;
+    const post = {
+        id,title,imageUrl,caption
+    }
+    try{
+        let data = await Posts.updatePost(post);
+        res.render('home',{
+            posts: data
+        });
+    }
+    catch(err){
+        next();
+    }
+}
