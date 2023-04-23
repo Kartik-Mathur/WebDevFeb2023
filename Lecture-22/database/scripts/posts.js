@@ -101,6 +101,7 @@ class Posts{
                         else newData.push(d);
                     })
                     console.log(newData);
+                    
                     fs.writeFile(
                         filePath,
                         JSON.stringify(newData),
