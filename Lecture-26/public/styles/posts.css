@@ -1,0 +1,17 @@
+.postsList{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+.postItem{
+    border: 1px solid black;
+    box-shadow: 4px 4px 10px black;
+    margin: 10px;
+    border-radius: 3px;
+    list-style: none;
+    width: 25%;
+}
+
+.postImage{
+    width: 100%;
+}
