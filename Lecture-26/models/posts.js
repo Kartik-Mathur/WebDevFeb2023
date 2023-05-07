@@ -1,5 +1,7 @@
+const { ObjectId } = require("mongodb");
 const { getDB } = require("../database/database");
 const collectionName = 'posts';
+
 
 class Posts {
     constructor(imageUrl, description, title) {
@@ -21,7 +23,54 @@ class Posts {
                 console.log(data);
                 resolve(data);
             }
-            catch(err){
+            catch (err) {
+                reject(err);
+            }
+        })
+    }
+
+    static deletePost(id) {
+        return new Promise(async (resolve, reject) => {
+            let db = getDB().collection(collectionName);
+            try {
+                await db.deleteOne({ _id: new ObjectId(id) })
+                let data = await db.find({}).toArray();
+                resolve(data);
+            } catch (err) {
+                reject(err);
+            }
+        })
+    }
+
+    static getPost(id) {
+        return new Promise(async (resolve, reject) => {
+            let db = getDB().collection(collectionName);
+            try {
+                let data = await db.findOne({ _id: new ObjectId(id) });
+                resolve(data);
+            } catch (err) {
+                reject(err);
+            }
+        })
+    }
+
+    static updatePost(newPost) {
+        const { id, description, imageUrl, title } = newPost;
+        return new Promise(async (resolve, reject) => {
+            let db = getDB().collection(collectionName);
+            try {
+                await db.updateOne(
+                    { _id: new ObjectId(id) },
+                    {
+                        $set: {
+                            description,
+                            title,
+                            imageUrl
+                        }
+                    }
+                )
+                resolve("Updated Successfully");
+            } catch (err) {
                 reject(err);
             }
         })

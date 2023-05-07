@@ -15,3 +15,43 @@
 .postImage{
     width: 100%;
 }
+
+.deleteButton{
+    text-decoration: none;
+}
+
+
+.postForm{
+    border: 1px solid black;
+    width: 60%;
+    margin: auto;
+}
+
+.postForm::after,
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.updateImage{
+    width: 100%;
+}
+
+.floatRight{
+    float: right;
+}
+
+.floatLeft{
+    float: left;
+}
+.w30{
+    width: 30%;
+}
+.w66{
+    width: 66%;
+}
+
+.w100{
+    width: 100%;
+}

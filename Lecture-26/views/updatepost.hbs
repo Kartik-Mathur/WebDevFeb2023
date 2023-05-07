@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/../styles/style.css">
+    <link rel="stylesheet" href="/../styles/posts.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    {{> navbar}}
+    <form class="postForm" action="/post/updatepost" method="POST">
+        <div>
+            <div class="floatLeft w30">
+                <img class="updateImage" src="{{data.imageUrl}}"><br>
+            </div>
+            <div class="floatRight clearfix w66">
+                <div class="floatLeft">
+                    <label for="imageUrl">Image Url: </label><br>
+                    <label for="title">Title: </label><br>
+                    <label for="description">Description: </label><br>
+                </div>
+                <div class="floatRight">
+                    <input type="hidden" name="id" value="{{data._id}}">
+                    <input type="text" id="imageUrl" name="imageUrl" value="{{data.imageUrl}}"><br>
+
+                    <input type="text" id="title" name="title" value="{{data.title}}" id="title"><br>
+
+                    <input type="text" id="description" name="description" value="{{data.description}}"
+                        id="description"><br>
+                    <div><button type="submit">Update Details</button></div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+
+</body>
+
+</html>

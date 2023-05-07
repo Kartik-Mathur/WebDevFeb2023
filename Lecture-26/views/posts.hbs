@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/../styles/style.css">
     <link rel="stylesheet" href="/../styles/posts.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -17,13 +18,16 @@
         <li class="postItem">
             <img id={{d._id}} class="postImage" src={{d.imageUrl}}><br>
             <div class="postTitle">{{d.title}}</div>
-            <div class="postDescription">{{d.description}}</div>
-            <button id={{d._id}}>🗑</button>
-            <button id={{d._id}}>📝</button>
+            <div class="postDescription"><small>{{d.description}}</small></div>
+            <button class="postDelete" id={{d._id}}>🗑</button>
+            <button class="postUpdate" id={{d._id}}>
+                <a href="/post/updatepost?id={{d._id}}">📝</a>
+            </button>
         </li>
         {{/each}}
     </ul>
 
+    <script src="js/posts.js"></script>
 </body>
 
 </html>

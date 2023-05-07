@@ -5,6 +5,11 @@ const router = express.Router();
 
 router.get('/addpost',postController.getAddPost);
 router.post('/addpost',postController.postAddPost);
+router.post('/deletepost',postController.postDeletePost);
+
+router.get('/updatepost',postController.getUpdatePost);
+router.post('/updatepost',postController.postUpdatePost);
+
 router.get('/',postController.getPost);
 
 module.exports = router;
