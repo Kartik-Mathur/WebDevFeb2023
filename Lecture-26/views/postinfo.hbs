@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/../styles/style.css">
+    <link rel="stylesheet" href="/../styles/posts.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    {{> navbar}}
+    <ul class="postsList">
+        <li class="postItem">
+            <img id={{data._id}} class="postImage" src={{data.imageUrl}}><br>
+            <div class="postTitle">{{data.title}}</div>
+            <div class="postDescription"><small>{{data.description}}</small></div>
+            <button class="postDelete" id={{data._id}}>🗑</button>
+            <button class="postUpdate" id={{data._id}}>
+                <a href="/post/updatepost?id={{data._id}}">📝</a>
+            </button>
+
+            <form class="commentForm" action="/post/addComment" method="POST">
+                <input type="text" name="comment" id="comment" placeholder="Enter Comment">
+                <input type="hidden" name="id" value="{{data._id}}" id="postId" placeholder="Enter Comment">
+                <button type="submit">Add Comment</button>
+            </form>
+
+            <div class="commentSection">
+                {{#each data.comments as |c|}}
+                    <div class="commentItem">
+                        {{c}}
+                    </div>
+                {{/each}}
+                {{!-- <div class="commentItem">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloribus qui amet voluptates,
+                    perspiciatis quisquam aspernatur. 
+                </div>
+
+                <div class="commentItem">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloribus qui amet voluptates,
+                    perspiciatis quisquam aspernatur. 
+                </div> --}}
+            </div>
+        </li>
+
+    </ul>
+
+
+    <script src="/../js/posts.js"></script>
+</body>
+
+</html>

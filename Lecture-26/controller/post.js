@@ -64,3 +64,30 @@ module.exports.postUpdatePost = (req,res,next)=>{
             next(err);
         })
 }
+
+
+module.exports.getViewPost = (req,res,next)=>{
+    const {id} = req.query;
+    Posts.getPost(id)
+        .then((data)=>{
+            console.log("Inside view post",data);
+            res.render('postinfo',{
+                data
+            });
+        })
+        .catch(err=>{
+            next(err)
+        });
+}
+
+module.exports.postAddComment = (req,res,next)=>{
+    const {id, comment} = req.body;
+    Posts.addComment(id,comment)
+        .then((newComments)=>{
+            res.send(newComments);
+        })
+        .catch(err=>{
+            next(err);
+        })
+
+}

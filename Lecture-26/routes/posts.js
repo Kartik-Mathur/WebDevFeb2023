@@ -10,6 +10,10 @@ router.post('/deletepost',postController.postDeletePost);
 router.get('/updatepost',postController.getUpdatePost);
 router.post('/updatepost',postController.postUpdatePost);
 
+router.get('/viewpost',postController.getViewPost);
+
+router.post('/addcomment',postController.postAddComment);
+
 router.get('/',postController.getPost);
 
 module.exports = router;

@@ -23,6 +23,10 @@
             <button class="postUpdate" id={{d._id}}>
                 <a href="/post/updatepost?id={{d._id}}">📝</a>
             </button>
+
+            <button class="postInfo">
+                <a href="/post/viewpost?id={{d._id}}">ℹ️</a>
+            </button>
         </li>
         {{/each}}
     </ul>

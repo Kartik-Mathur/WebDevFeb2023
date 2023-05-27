@@ -55,3 +55,14 @@
 .w100{
     width: 100%;
 }
+
+.commentSection{
+    width: 80%;
+    margin: auto;
+    list-style: none;
+}
+
+.commentItem{
+    border: 1px solid black;
+    margin: 5px;
+}

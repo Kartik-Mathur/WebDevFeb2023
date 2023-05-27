@@ -8,6 +8,7 @@ class Posts {
         this.imageUrl = imageUrl;
         this.description = description;
         this.title = title;
+        this.comments = [];
     }
 
     save() {
@@ -71,6 +72,32 @@ class Posts {
                 )
                 resolve("Updated Successfully");
             } catch (err) {
+                reject(err);
+            }
+        })
+    }
+
+    static addComment(id,comment){
+        return new Promise(async (resolve,reject)=>{
+            let db = getDB().collection(collectionName);
+
+            try{
+                let data = await db.findOne({_id: new ObjectId(id)});
+                // console.log(data);
+                let newComments = data.comments || [];
+                newComments.push(comment);
+                await db.updateOne(
+                    {_id: new ObjectId(id)},
+                    {
+                        $set:{
+                            comments: newComments
+                        }
+                    }
+                )
+
+                resolve(newComments);
+            }
+            catch(err){
                 reject(err);
             }
         })
