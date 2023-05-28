@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{> navbar}}
+    <h1>Users</h1>
+    <form action="/adduser" method="POST">
+        <input type="text" name="name" placeholder="enter user name"><br>
+        <input type="text" name="age" placeholder="enter age"><br>
+
+        <button type="submit">Add User</button>
+    </form>
+
+    <div class="users">
+        {{#each users as |user|}}
+            <div>{{user.name}}</div>
+            <div>{{user.age}}</div>
+
+            <button>
+                <a href="/deleteuser?id={{user._id}}">Delete User</a>
+            </button>
+        {{/each}}
+    </div>
+</body>
+</html>
