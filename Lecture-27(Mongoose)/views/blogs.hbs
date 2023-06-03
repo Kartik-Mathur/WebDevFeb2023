@@ -10,13 +10,7 @@
 
 <body>
     {{> navbar}}
-    <h1>My Blogs</h1>
-    <form action="/addblog" method="POST">
-        <input type="text" name="title" placeholder="enter title"><br>
-        <input type="text" name="description" placeholder="enter description"><br>
-
-        <button type="submit">Add Blog</button>
-    </form>
+    <h1>All Blogs</h1>
 
     {{#each blogs as |blog|}}
     <div style="border: 1px solid black;">
