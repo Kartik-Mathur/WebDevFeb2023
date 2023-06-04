@@ -17,6 +17,7 @@
     "hbs": "^4.2.0",
     "mongoose": "^7.2.2",
     "passport": "^0.6.0",
+    "passport-facebook": "^3.0.0",
     "passport-local": "^1.0.0"
   }
 }

@@ -17,5 +17,14 @@ router.post('/login',
         res.redirect('/profile');
     });
 
+router.get('/auth/facebook',
+    passport.authenticate('facebook'));
+
+router.get('/auth/facebook/callback',
+    passport.authenticate('facebook', { failureRedirect: '/login' }),
+    function (req, res) {
+        // Successful authentication, redirect home.
+        res.redirect('/profile');
+    });
 
 module.exports = router;
