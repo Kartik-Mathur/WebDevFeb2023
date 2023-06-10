@@ -22,12 +22,12 @@ body{
 .side-a{
     background-color: orange;
     position: absolute;
-    background: url("https://www.pinkvilla.com/imageresize/akshay_kumar_in_talks_with_producer_dinesh_vijan_for_their_next.jpg?width=752&t=pvorg");
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCUtLMxyo_3cg4_aWEN9PlV_-rhMwaQWGTAHlFNEbd&s");
     background-size: cover;
 }
 
 .side-b{
-    background-color: orchid;
+    background-color: #ccc;
     position: absolute;
     transform: rotateY(180deg);
 }
