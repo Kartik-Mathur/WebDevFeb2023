@@ -1,13 +1,30 @@
 const socket = io();
 const btn = document.querySelector('#btn');
+const btn1 = document.querySelector('#btn1');
 const msg = document.querySelector('#msg');
 const msgList = document.querySelector('.msgList');
+const userdetails = document.querySelector('.userdetails');
+const chatbox = document.querySelector('.chatbox');
+const username = document.querySelector('#username');
+
+chatbox.classList.add('hide');
 
 btn.addEventListener('click',(ev)=>{
     socket.emit('sendmessage',{
-        msg:msg.value,
+        "msg":msg.value,
         id:socket.id
     });
+})
+
+btn1.addEventListener('click',(ev)=>{
+    socket.emit('signup',{
+        username: username.value
+    })
+})
+
+socket.on('signupSuccess',(msg)=>{
+    chatbox.classList.remove('hide');
+    userdetails.classList.add('hide');
 })
 
 socket.on('loggedIn',(msg)=>{
