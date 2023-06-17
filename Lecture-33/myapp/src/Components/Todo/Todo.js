@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Todoinput from '../Todoinput/Todoinput';
 import Todolist from '../Todolist/Todolist';
 import { v4 as uuidv4 } from 'uuid';
+import Wrapper from '../Wrapper/Wrapper';
 
 const initialTodos = [
     {name: 'Cricket', id: 1},
@@ -28,10 +29,13 @@ const Todo = () => {
     // })
     // newTodo.push(newTask);
     return (
-        <div>
+        <>
             <Todoinput updateTodo={updateTodo} />
             <Todolist todos={todos} />
-        </div>
+            <div className="todoItem">
+                This is a random text
+            </div>
+        </>
     )
 }
 
