@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Todoitem = ({task}) => {
-    
+const Todoitem = (props) => {
+    let {task} = props;
     return (
         <li>
             {task.name}
