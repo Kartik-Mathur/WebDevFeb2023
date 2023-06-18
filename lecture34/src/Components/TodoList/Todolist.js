@@ -10,6 +10,7 @@ const Todolist = (props) => {
                 todos.map((item,indx)=>
                 <Todoitem 
                     updateCheckBox={props.updateCheckBox}
+                    deleteItem={props.deleteItem}
                     upShow={ indx!= 0? true: false} 
                     key={item.id} 
                     item={item} 

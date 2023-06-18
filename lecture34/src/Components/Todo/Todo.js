@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Todoinput from '../TodoInput/Todoinput'
 import Todolist from '../TodoList/Todolist'
 import { v4 as uuidv4 } from 'uuid';
@@ -6,8 +6,13 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 const Todo = () => {
+
     let initialTodos = JSON.parse(localStorage.getItem('todos')) || [];
     const [todos, setTodos] = useState(initialTodos)
+   
+    useEffect(()=>{
+        console.log("I am use effect hook");
+    },[]);
 
     const updateTodo = (newTask) => {
         console.log(todos);
@@ -21,7 +26,7 @@ const Todo = () => {
     }
 
     const updateCheckBox = (id) => {
-        setTodos((prevState) => 
+        setTodos((prevState) =>
             prevState.map((todo) => {
                 return todo.id == id ?
                     { name: todo.name, id: todo.id, checked: !todo.checked } :
@@ -30,10 +35,18 @@ const Todo = () => {
         )
     }
 
+    const deleteItem = (id) => {
+        setTodos((prevState)=>
+            prevState.filter((item)=>{
+                return item.id === id ? false: true;
+            })
+        )
+    }
+
     return (
         <>
             <Todoinput updateTodo={updateTodo} />
-            <Todolist todos={todos} updateCheckBox={updateCheckBox}/>
+            <Todolist deleteItem={deleteItem} todos={todos} updateCheckBox={updateCheckBox} />
         </>
     )
 }
