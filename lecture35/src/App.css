@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.navBar{
+  margin: 5px;
+}
+
+.navItem{
+  margin: 0 5px;
+  text-decoration: none;
+  color: rgb(64, 64, 160);
+}
+
+.active{
+  color: orangered;
+}
