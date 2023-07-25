@@ -7,10 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="btn">
-        Click Karo
-    </button>
-
-    <script src="./executionContext.js"></script>
+    
+    {{#each users as |user|}}
+        {{user.title}} : <img style="width: 100px" src="{{user.imgPath}}">
+    {{/each}}
 </body>
 </html>
