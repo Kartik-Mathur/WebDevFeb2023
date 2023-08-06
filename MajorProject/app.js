@@ -30,7 +30,7 @@ app.get('/',(req,res,next)=>{
 app.use('/signup', require('./routes/signup'));
 app.use('/login',require('./routes/login'));
 // app.use('/admin',require('./routes/login'));
-// app.use('/shop',require('./routes/login'));
+app.use('/shop',require('./routes/shop'));
 
 mongoose.connect(process.env.MONGO_URL)
     .then(() => {
