@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px black;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navItem {
+    padding: 5px;
+    font-size: 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.navItem:link,
+.navItem:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.navItem:hover{
+    color: blue;
+}

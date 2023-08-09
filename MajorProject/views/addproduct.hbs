@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> meta}}
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/navbar.css">
+</head>
+
+<body>
+
+    {{>navbar}}
+
+    <div class="container">
+        <div class="msg">{{msg}}</div>
+
+        <form action="/admin/add-product" class="addProduct" method="POST" enctype="multipart/form-data">
+            <input type="text" class="name" placeholder="Enter Name" name="name"><br>
+            Upload Image: <input type="file" class="image" name="image"><br>
+            <input type="text" class="price" placeholder="Enter Price" name="price"><br>
+            <textarea type="text" class="description" name="description">....Enter Description
+            </textarea><br>
+
+            <button type="submit" class="submitBtn">Add Product</button>
+
+        </form>
+        
+    </div>
+
+</body>
+
+</html>
