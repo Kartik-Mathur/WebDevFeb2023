@@ -10,6 +10,7 @@ const passport = require('./auth/passport');
 const hbs = require('hbs');
 const multer = require('multer');
 
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'uploads/')
@@ -20,7 +21,6 @@ const storage = multer.diskStorage({
         cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname))
     }
 })
-
 
 const upload = multer({ storage });
 
@@ -45,13 +45,23 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/', (req, res, next) => {
-    res.redirect('/login')
+    if (req.user) return res.redirect('/shop/profile');
+    return res.redirect('/login');
 })
 
-app.use('/signup', require('./routes/signup'));
-app.use('/login', require('./routes/login'));
-app.use('/admin', require('./routes/admin'));
-app.use('/shop', require('./routes/shop'));
+app.get('/logout', function (req, res, next) {
+    req.logout(function (err) {
+        if (err) { return next(err); }
+        res.redirect('/');
+    });
+});
+const ifNotLoggedIn = require('./middlewares/checkedLoggedIn');
+app.use('/signup', ifNotLoggedIn, require('./routes/signup'));
+app.use('/login', ifNotLoggedIn, require('./routes/login'));
+
+const isLoggedIn = require('./middlewares/isLoggedIn');
+app.use('/admin', isLoggedIn, require('./routes/admin'));
+app.use('/shop', isLoggedIn, require('./routes/shop'));
 
 mongoose.connect(process.env.MONGO_URL)
     .then(() => {

@@ -2,6 +2,10 @@
     <a class="navItem" href="#">Shop</a>
     <a class="navItem" href="#">Profile</a>
     <a class="navItem" href="#">Products</a>
-    <a class="navItem" href="#">Admin Products</a>
-    <a class="navItem" href="/admin/add-product">Add Products</a>
+    {{#if this.isAdmin}}
+        <a class="navItem" href="#">Admin Products</a>
+        <a class="navItem" href="/admin/add-product">Add Products</a>
+    {{/if}}
+
+    <a href="/logout" class="navItem">Logout</a>
 </nav>
