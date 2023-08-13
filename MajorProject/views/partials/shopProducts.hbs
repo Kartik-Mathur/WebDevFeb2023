@@ -1,0 +1,10 @@
+<div class="productsList">
+    {{#each this.products as |product|}}
+    <div class="productItem">
+        <img src="{{product.imageUrl}}"><br>
+        <div class="name">{{product.name}}</div>
+        <div class="price">{{product.price}}</div>
+        <div class="description">{{product.description}}</div>
+    </div>
+    {{/each}}
+</div>

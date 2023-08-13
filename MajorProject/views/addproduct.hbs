@@ -9,8 +9,7 @@
 
 <body>
 
-    {{>navbar}}
-
+    {{>navbar isAdmin=isAdmin}}
     <div class="container">
         <div class="msg">{{msg}}</div>
 
@@ -22,9 +21,8 @@
             </textarea><br>
 
             <button type="submit" class="submitBtn">Add Product</button>
-
         </form>
-        
+
     </div>
 
 </body>
