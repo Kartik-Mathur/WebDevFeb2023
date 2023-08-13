@@ -10,7 +10,8 @@ cloudinary.config({
 
 module.exports.getAddProduct = (req, res, next) => {
     res.render('addproduct', {
-        isAdmin: req.user.isAdmin
+        isAdmin: req.user.isAdmin,
+        cartCount: req.user.cart.length
     });
 }
 
@@ -49,7 +50,8 @@ module.exports.getProducts = async (req, res, next) => {
         })
         res.render('admin/products',{
             products,
-            isAdmin: req.user.isAdmin
+            isAdmin: req.user.isAdmin,
+            cartCount: req.user.cart.length
         })
     }
     catch (err) {

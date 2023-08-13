@@ -3,9 +3,18 @@
     <a class="navItem" href="#">Profile</a>
     <a class="navItem" href="/shop/products">Products</a>
     {{#if this.isAdmin}}
-        <a class="navItem" href="/admin/products">Admin Products</a>
-        <a class="navItem" href="/admin/add-product">Add Products</a>
+    <a class="navItem" href="/admin/products">Admin Products</a>
+    <a class="navItem" href="/admin/add-product">Add Products</a>
     {{/if}}
-
+    <a class="navItem" href="#">
+        <span class="cartName">
+            CART
+            {{#if cartCount}}
+            <span class="cartCount">{{cartCount}}</span>
+            {{else}}
+            <span class="cartCount"></span>
+            {{/if}}
+        </span>
+    </a>
     <a href="/logout" class="navItem">Logout</a>
 </nav>

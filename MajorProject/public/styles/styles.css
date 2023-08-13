@@ -16,3 +16,39 @@
     font-size: 20px;
     padding: 5px;
 }
+
+.cartName{
+    position: relative;
+}
+
+.cartCount{
+    position: absolute;
+    font-size: 12px;
+    top: -9px;
+    right: -9px;
+    width: 14px;
+    height: 14px;
+    background-color: rgb(133, 80, 255);
+    color: white;
+    border-radius: 7px;
+    font-weight: 800;
+    padding-left: 5px;
+}
+
+.sideView{
+    position: fixed;
+    top: 45px;
+    right: 0;
+    background-color: tomato;
+    width: 0;
+    z-index: 4;
+    height: 100%;
+    border: 1px solid black;
+    transition: width 1s;
+}
+
+.showCart{
+    width: 400px;
+}
+
+
